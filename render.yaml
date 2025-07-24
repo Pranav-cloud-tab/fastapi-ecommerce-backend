@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fastapi-ecommerce-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./ecommerce.db
+    plan: free
